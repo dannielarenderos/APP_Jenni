@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/fragment_Main">
+    <fragment android:id="@+id/fragment_Main" android:name="com.example.animalcare.fragments.Fragment_Main"
+              android:label="fragment_fragment__main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_fragment_main_to_animals_fragment" app:destination="@id/fragment_animals"/>
+        <action app:destination="@id/fragment_laws" android:id="@+id/action_fragment_main_to_fragment_laws"/>
+    </fragment>
+    <fragment android:id="@+id/fragment_animals" android:name="com.example.animalcare.fragments.Animal_Fragment"
+              android:label="fragment_animals" tools:layout="@layout/fragment_animal">
+        <action android:id="@+id/action_animals_fragment_to_fragment_races" app:destination="@id/fragment_races"/>
+    </fragment>
+    <fragment android:id="@+id/fragment_races" android:name="com.example.animalcare.fragments.fragment_raza"
+              android:label="fragment_races" tools:layout="@layout/fragment_raza">
+        <action android:id="@+id/action_fragment_races_to_fragment_main" app:destination="@id/fragment_Main"/>
+    </fragment>
+    <fragment android:id="@+id/fragment_laws" android:name="com.example.animalcare.fragments.fragment_leyes"
+              android:label="fragment_laws" tools:layout="@layout/fragment_laws"/>
+    <fragment android:id="@+id/fragment_associations" android:name="com.example.animalcare.fragments.Associations"
+              android:label="fragment_associations" tools:layout="@layout/fragment_associations"/>
+</navigation>
